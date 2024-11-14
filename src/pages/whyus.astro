@@ -1,0 +1,63 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="why">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">WHY CHOOSE EVOLVX?</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+ 
+      <p class="text-lg leading-relaxed text-slate-500">
+       
+At EvolvX, we focus on quality, durability, and customization in our labeling solutions for diverse applications, from industrial to commercial. 
+
+      </p>
+      <h2 class="font-bold text-3xl text-gray-800">
+        Commitment to Quality
+    </h2>
+      <p class="text-lg leading-relaxed text-slate-500">
+        EvolvX is a trusted supplier of high-quality labels and signs designed for durability and reliability. Our products withstand environmental challenges like moisture, chemicals, UV light, and abrasion, backed by rigorous testing. Our safety signs meet Australian Standards for Signage (AS1319) and ISO 7010, in line with global guidelines for hazard identification and risk management.
+        </p>
+        <h2 class="font-bold text-3xl text-gray-800">
+          Durability You Can Trust
+      </h2>
+        <p class="text-lg leading-relaxed text-slate-500">
+          Our products are designed to endure harsh conditions, maintaining clarity and integrity in extreme temperatures and tough environments.          </p>
+          <h2 class="font-bold text-3xl text-gray-800">
+            Custom Solutions
+          </h2>
+          <p class="text-lg leading-relaxed text-slate-500">
+            With a range of customization options, you can tailor labels and signs to your specific needs, including size, shape, and graphics.            </p>
+
+            <h2 class="font-bold text-3xl text-gray-800">
+              Expert Support
+            </h2>
+            <p class="text-lg leading-relaxed text-slate-500">
+              Our knowledgeable team provides personalized assistance throughout the design and ordering process to ensure optimal solutions for your needs.
+              <h2 class="font-bold text-3xl text-gray-800">
+                Versatile Use
+              </h2>
+              <p class="text-lg leading-relaxed text-slate-500">
+                EvolvX solutions are suitable for various industries, including manufacturing, healthcare, logistics, and retail.
+                <h2 class="font-bold text-3xl text-gray-800">
+                  Customer Satisfaction
+                </h2>
+                <p class="text-lg leading-relaxed text-slate-500">
+                  We’re dedicated to exceeding customer expectations and quickly resolving any issues.        </p>
+      
+    </div>
+
+  </Container>
+</Layout>

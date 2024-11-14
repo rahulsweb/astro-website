@@ -1,0 +1,189 @@
+---
+import { Picture } from "astro:assets";
+import heroImage from "assets/hero.jpeg";
+---
+
+<script>
+
+
+const swiper = new Swiper(".swiper", {
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    clickable: true
+  },
+  keyboard: true,
+  mousewheel: true
+
+  // effect: 'creative',
+  // creativeEffect: {
+  //  prev: {
+  //    // will set `translateZ(-400px)` on previous slides
+  //    translate: [0, 0, -400],
+  //  },
+  //  next: {
+  //    // will set `translateX(100%)` on next slides
+  //    translate: ['100%', 0, 0],
+  //  },
+  // },
+  // effect: 'coverflow',
+});
+</script>
+
+<div class="container">
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="image__wrapper">
+            <div
+            class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+            <!--First item-->
+            <div
+              class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-twe-carousel-active
+              data-twe-carousel-item
+              style="backface-visibility: hidden">
+              <Picture
+              src={heroImage}
+              alt="not image"
+              sizes="(max-width: 800px) 100vw, 800px"
+              width={800}
+              height={600}
+               loading="lazy"
+           
+              class="w-full rounded-md object-cover object-center bg-white"
+            />
+              <div
+                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                <h5 class="text-xl">      Reliability you can see.
+                    Quality you can feel</h5>
+                <p>
+                    Driven by quality, precision, and a deep commitment to industry standards, we deliver premium globally certified products designed to surpass regulatory demands and elevate customer expectations.
+                </p>
+            
+              </div>
+            </div>
+            <!--Second item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-twe-carousel-item
+              style="backface-visibility: hidden">
+              <Picture
+              src={heroImage}
+                 alt="not image"
+              sizes="(max-width: 800px) 100vw, 800px"
+              width={800}
+              height={600}
+              loading="lazy"
+           
+              class="w-full rounded-md object-cover object-center bg-white"
+            />
+                <h1
+              class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+              Reliability you can see.
+        Quality you can feel
+        
+            </h1>
+            <p class="text-lg mt-4 text-slate-600 max-w-xl">
+              Driven by quality, precision, and a deep commitment to industry standards, we deliver premium globally certified products designed to surpass regulatory demands and elevate customer expectations.
+            </p>
+            </div>
+            <!--Third item-->
+            <div
+              class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+              data-twe-carousel-item
+              style="backface-visibility: hidden">
+              <img
+                src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
+                class="block w-full"
+                alt="..." />
+              <div
+                class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+                <h5 class="text-xl">Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+  
+        <div class="swiper-slide">
+          <div class="image__wrapper">
+            <img src="https://raw.githubusercontent.com/thatanjan/carousel-slider-swiper.js-yt/youtube/images/2.jpg" alt="" />
+          </div>
+        </div>
+
+      </div>
+  
+      <div class="swiper-pagination"></div>
+  
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div>
+
+  <style>
+    * {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: #292929;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.swiper {
+  width: 80%;
+}
+
+.image__wrapper {
+  width: 100%;
+  position: relative;
+  padding-top: 56.25%;
+}
+
+.image__wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* .swiper-pagination-bullet-active { */
+/*  background-color: red; */
+/* } */
+/**/
+/* .swiper-button-prev, */
+/* .swiper-button-next { */
+/*  color: red; */
+/* } */
+/**/
+/* .swiper-button-prev:after, */
+/* .swiper-button-next:after { */
+/*  font-size: 2rem; */
+/* } */
+/**/
+  </style>
+  
+  
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js" defer></script>

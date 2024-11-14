@@ -1,0 +1,48 @@
+---
+import { getCollection } from "astro:content";
+import { Picture } from "astro:assets";
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+
+// Filter team entries with 'draft: false' & date before current date
+const publishedTeamMembers = await getCollection("team", ({ data }) => {
+  return !data.draft && data.publishDate < new Date();
+});
+---
+
+<Layout title="About">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">About us</Fragment>
+    </Sectionhead>
+
+    <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
+ 
+      <p class="text-lg leading-relaxed text-slate-500">
+        At EvolvX, we are proud to leverage over three decades of combined expertise in the specialized fields of label printing and fasteners, establishing ourselves as a trusted partner within Pune, India's local market. Our journey has been defined by a commitment to quality, precision, and a deep understanding of both industry standards and compliance requirements. This foundation allows us to deliver premium, locally certified products that meet stringent regulatory expectations and exceed customer standards.
+        Our success in Pune has inspired us to expand our reach to Australia, where we are dedicated to providing clients with innovative, tailored solutions that address their unique needs. We recognize that each client has specific requirements, whether it’s for specialized labels, reliable fasteners, or a combination of both. Our extensive experience enables us to adapt to these varied needs, offering products that are not only high-quality but also customized to fit specific applications, ensuring durability and effectiveness in diverse environments.
+        .
+      </p>
+      <p class="text-lg leading-relaxed text-slate-500">
+        In addition to quality products, we are passionate about offering informed guidance and helping clients navigate the technical aspects of their choices. Whether they need advice on compliance, suitability, or application efficiency, we’re here to support them every step of the way. Our goal is to ensure that each customer benefits from our depth of knowledge and receives impactful, effective solutions tailored to their specific challenges.
+As we continue to grow, we remain committed to upholding the standards that define us, bringing our expertise, dedication, and customer-first approach to every project we undertake. At EvolvX, it’s not just about products—it’s about building lasting partnerships and delivering solutions that drive success.
+
+        </p>
+        <h2 class="font-bold text-3xl text-gray-800">
+          Vision
+        </h2>
+        <p class="text-lg leading-relaxed text-slate-500">
+          To be a leading global provider of high-quality, compliant label printing and fastener solutions, recognized for our commitment to innovation, reliability, and customer-focused service. We aim to set industry standards and build strong partnerships by delivering tailored solutions that empower clients across diverse markets to achieve their goals with confidence.  
+          </p>
+          <h2 class="font-bold text-3xl text-gray-800">
+            Mission
+          </h2>
+          <p class="text-lg leading-relaxed text-slate-500">
+            At EvolvX, our mission is to leverage our extensive industry expertise to deliver exceptional, locally compliant products and solutions in label printing and fasteners. We are dedicated to meeting the unique needs of each client by providing reliable products and insightful guidance, ensuring safety, efficiency, and compliance in every project. Driven by quality and precision, we strive to build lasting relationships by consistently exceeding expectations and fostering trust through our commitment to excellence.    
+            </p>
+
+    </div>
+
+  </Container>
+</Layout>

@@ -1,0 +1,120 @@
+---
+import Link from "./ui/link.astro";
+import Layout from "@layouts/Layout.astro";
+import { Icon } from "astro-icon/components";
+import { Image } from "astro:assets";
+import Logo from "../assets/img/Logo.png";
+---
+
+<!-- <div
+  class="bg-light p-2 md:px-20 md:py-20  mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center"> -->
+<h2 class="text-2xl md:text-4xl tracking-tight text-decoration mb-10 font-bold">
+  CONTACT US
+</h2>
+<!-- <div class="grid  gap-10 mx-auto max-w-4xl mt-16">
+    <div>
+
+      <p class="text-lg leading-relaxed text-slate-500 mt-3">
+        Have something to say? We are here to help. Fill up the form or send
+        email or call phone.
+      </p>
+      <div class="mt-5">
+        <div class="flex items-center mt-2 space-x-2 text-gray-600">
+          <Icon class="text-gray-400 w-4 h-4" name="uil:map-marker" />
+          <span>        Evolyx Australia Pty Ltd        
+          </span>
+          <h6>
+            ACN: 681 705 831
+            287/18-20 Edinburgh St
+            OAKLEIGH SOUTH VIC 
+            3167
+            AUSTRALIA
+          </h6>
+        </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+          <Icon class="text-gray-400 w-4 h-4" name="uil:envelope" /><a
+            href="mailto:hello@astroshipstarter.com"
+            >hello@astroshipstarter.com</a
+          >
+        </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
+          <Icon class="text-gray-400 w-4 h-4" name="uil:phone" /><a
+            href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
+          >
+        </div>
+      </div>
+    </div>
+    <div>
+     
+    </div>
+  </div>
+  <div class="flex mt-5">
+    <div class="flex md:items-center md:justify-start justify-center">
+      <Link href="/contact" style="inverted">
+        <button class="w-36 h-12 rounded-full bg-indigo-600 transition-all duration-700 hover:bg-indigo-800 shadow text-white text-center text-base font-semibold leading-6">Know More</button>
+
+      </Link>
+  </div>
+  </div> -->
+
+<section class="dark:bg-gray-300 w-full">
+  <div
+    class="container grid grid-cols-1 gap-10 px-6 py-12 mx-auto lg:grid-cols-3"
+  >
+    <div>
+      <Image src={Logo} alt="A bird sitting on a nest of eggs." width="500" />
+      <h1 class="mt-2 text-xl font-bold">
+        Labels & Stickers Solutions for Your Business
+      </h1>
+
+      <p class="mt-3 font-bold">
+        Whether you're a start-up or a blue-chip company, EvolvX is equipped to
+        meet your labeling needs. Our team is dedicated to responding to
+        customer requests swiftly and effectively. EvolvX supplies high-quality,
+        customized labels tailored for both industry and commerce.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 gap-12 lg:col-span-2 sm:grid-cols-2">
+      <div>
+        <h2 class="mb-2 text-lg font-extrabold">Menu</h2>
+        <ul
+          class="max-w-md space-y-1 font-bold list-none list-inside dark:text-gray-400"
+        >
+          <li>Industrial Labels & Stickers</li>
+          <li>Hardware Supply</li>
+          <li>Custom Labels & Stickers</li>
+          <li>Electrical Assemblies</li>
+          <li>Tags & Flags</li>
+          <li>Self-Laminating Labels</li>
+        </ul>
+      </div>
+
+      <div>
+        <h2 class="mb-2 text-lg font-extrabold">Menu</h2>
+        <ul
+          class="max-w-md space-y-1 font-bold list-none list-inside dark:text-gray-400"
+        >
+          <li>Industrial Labels & Stickers</li>
+          <li>Hardware Supply</li>
+          <li>Custom Labels & Stickers</li>
+          <li>Electrical Assemblies</li>
+          <li>Tags & Flags</li>
+          <li>Self-Laminating Labels</li>
+        </ul>
+      </div>
+      <div>
+        <h2 class="mb-2 text-lg font-extrabold">Menu</h2>
+        <ul
+          class="max-w-md space-y-1 font-bold list-none list-inside dark:text-gray-400"
+        >
+          <li>Industrial Labels & Stickers</li>
+          <li>Hardware Supply</li>
+          <li>Custom Labels & Stickers</li>
+          <li>Electrical Assemblies</li>
+          <li>Tags & Flags</li>
+          <li>Self-Laminating Labels</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- </div> -->
