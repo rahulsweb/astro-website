@@ -1,30 +1,24 @@
----
+<!-- ---
 var contador = 0;
 var str="RELIABILITY YOU CAN SEE";
 function cambio() {
-
-    if(contador % 2==0) {
+    alert()
+    if(contador == 3) {
           str="SEE QUALITY YOU CAN FEEL"
     } else {
         contador++;
         str="RELIABILITY YOU CAN SEE";
         setInterval(cambio, 1000);
     }
-   
 }
-
-
-
----
-
-
-<div class="pickgradient" >
- 
+cambio();
+--- -->
+<div class="pickgradient">
     <!-- <img src="/hero.jpeg" alt=""> -->
     <div class="content">
         <div class="overlay-text">
             
-            <h1 class="text-white font-extrabold text-6xl">{str}</h1>
+            <h1  class="text-white font-extrabold text-4xl heading"><span class="front">RELIABILITY YOU CAN SEE</span></h1>
             <p class="text-gray-600  text-2xl">Driven by quality, precision, and a deep
                 commitment to industry standards.</p>
                
@@ -55,11 +49,17 @@ function cambio() {
   .overlay-text {
   position: absolute;
   top: 50%; 
-  left: 50%; 
+  left: 35%; 
   transform: translate(-50%, -50%); 
   color: #fff; 
   padding: 10px 20px; 
-  font-size: 20px; 
+  /* font-size: 20px;  */
   text-align: center;
   }
+
+  .pickgradient:hover .front{
+   display: none;
+}  .pickgradient:hover .heading:after{
+    content: ' SEE QUALITY YOU CAN FEEL';
+}
 </style>
