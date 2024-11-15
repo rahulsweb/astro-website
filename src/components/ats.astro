@@ -4,7 +4,7 @@ import Link from "./ui/link.astro";
 
 <div
   class="bg-light p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
-  <h2 class="text-2xl md:text-4xl tracking-tight text-decoration  mb-10 font-bold">
+  <h2 class="text-2xl md:text-4xl tracking-tight text-decoration  mb-10 ">
    ABOUT US.
   </h2>
   <p class="text-lg leading-relaxed text-slate-500 mt-5">
@@ -24,9 +24,18 @@ import Link from "./ui/link.astro";
   <div class="flex mt-5">
     <div class="flex md:items-center md:justify-start justify-center">
       <Link href="/about" style="inverted">
-        <button class="w-36 h-12 rounded-full bg-indigo-600 transition-all duration-700 hover:bg-indigo-800 shadow text-white text-center text-base font-semibold leading-6">Know More</button>
+        <button class="w-36 h-12 rounded-full btn-bg-color bgn-text-color  transition-all duration-700 shadow  text-center text-base font-semibold leading-6">Know More</button>
 
       </Link>
   </div>
   </div>
 </div>
+
+<style>
+  .btn-bg-color{
+    background-color: #00B6F0 !important;
+  }
+  .btn-text-color{
+    color:#5B5B5B !important;
+  }
+</style>

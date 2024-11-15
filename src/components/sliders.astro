@@ -1,10 +1,18 @@
 ---
 ---
-<div class="pickgradient ">
-    <img src="/hero.jpeg" alt="">
+<div class="pickgradient">
+    <!-- <img src="/hero.jpeg" alt=""> -->
     <div class="content">
     </div>
 </div>
-<style>
-
+<style is:global>
+.content{
+    width: 80vw;
+    
+    height:100vh;
+    background-size: 100% 100%;
+    background-image:  url(/src/assets/hero.jpeg);
+    background: linear-gradient(to right, ),url(/src/assets/hero.jpeg);
+    filter: alpha(opacity=50);
+}
 </style>

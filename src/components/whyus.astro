@@ -4,15 +4,15 @@ import Link from "./ui/link.astro";
 
 <div
   class="bg-light p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
-  <h2 class="text-2xl md:text-4xl tracking-tight text-decoration text-decoration mb-10 font-bold">
-   WHY US
+  <h2 class="text-2xl md:text-4xl tracking-tight text-decoration text-decoration mb-10 ">
+    Why Choose Us
   </h2>
   <p class="text-lg leading-relaxed text-slate-500">
     At EvolvX, we focus on quality, durability, and customization in our labeling solutions for diverse
 applications, from industrial to commercial.
 
    </p>
-  <div class="flex">
+  <div id="whyus" >
     
     <div class="border-8 border-blue-400  rounded-lg m-4 ">
       <div class="p-10  " >
@@ -136,3 +136,17 @@ applications, from industrial to commercial.
   </div>
   </div>
 </div> -->
+
+
+<style >
+  @media screen and (max-width: 800px) {
+    #whyus{
+      display:block;
+    }
+  }
+  @media screen and (min-width: 800px) {
+    #whyus{
+      display:flex;
+    }
+  }
+</style>

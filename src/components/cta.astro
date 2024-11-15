@@ -8,7 +8,7 @@ import Logo from "../assets/img/Logo.png";
 
 <!-- <div
   class="bg-light p-2 md:px-20 md:py-20  mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center"> -->
-<h2 class="text-2xl md:text-4xl tracking-tight text-decoration mb-10 font-bold">
+<h2 class="text-2xl md:text-4xl tracking-tight text-decoration mb-10 ">
   CONTACT US
 </h2>
 <!-- <div class="grid  gap-10 mx-auto max-w-4xl mt-16">
@@ -57,7 +57,7 @@ import Logo from "../assets/img/Logo.png";
 
 <section class="dark:bg-gray-300 w-full">
   <div
-    class="container grid grid-cols-1 gap-10 px-6 py-12 mx-auto lg:grid-cols-3"
+    class="container grid grid-cols-1 gap-1 px-6 py-12 mx-auto lg:grid-cols-3"
   >
     <div>
       <Image src={Logo} alt="A bird sitting on a nest of eggs." width="500" />
@@ -73,45 +73,49 @@ import Logo from "../assets/img/Logo.png";
       </p>
     </div>
 
-    <div class="grid grid-cols-1 gap-12 lg:col-span-2 sm:grid-cols-2">
+    <div class="grid grid-cols-3 gap-3 lg:col-span-2 sm:grid-cols-3">
       <div>
-        <h2 class="mb-2 text-lg font-extrabold">Menu</h2>
+        <h2 class="mb-2 text-lg font-extrabold font-bold p-2">MENU</h2>
         <ul
-          class="max-w-md space-y-1 font-bold list-none list-inside dark:text-gray-400"
+          class="max-w-md space-y-1 font-bold list-none list-inside "
         >
-          <li>Industrial Labels & Stickers</li>
-          <li>Hardware Supply</li>
-          <li>Custom Labels & Stickers</li>
-          <li>Electrical Assemblies</li>
-          <li>Tags & Flags</li>
-          <li>Self-Laminating Labels</li>
+          <li class="p-2">Industrial Labels & Stickers</li>
+          <li class="p-2">Hardware Supply</li>
+          <li class="p-2">Custom Labels & Stickers</li>
+          <li class="p-2">Electrical Assemblies</li>
+          <li class="p-2">Tags & Flags</li>
+          <li class="p-2">Self-Laminating Labels</li>
         </ul>
       </div>
 
       <div>
-        <h2 class="mb-2 text-lg font-extrabold">Menu</h2>
+        <h2 class="mb-2 text-lg font-extrabold font-bold p-2">INFORMATION</h2>
         <ul
-          class="max-w-md space-y-1 font-bold list-none list-inside dark:text-gray-400"
+          class="max-w-md space-y-1 font-bold list-none list-inside"
         >
-          <li>Industrial Labels & Stickers</li>
-          <li>Hardware Supply</li>
-          <li>Custom Labels & Stickers</li>
+          <li class="p-2">Privacy Policy</li>
+          <li class="p-2">Blogs</li>
+          <!-- <li>Custom Labels & Stickers</li>
           <li>Electrical Assemblies</li>
           <li>Tags & Flags</li>
-          <li>Self-Laminating Labels</li>
+          <li>Self-Laminating Labels</li> -->
         </ul>
       </div>
       <div>
-        <h2 class="mb-2 text-lg font-extrabold">Menu</h2>
+        <h2 class="mb-2 text-lg font-extrabold p-2">CONTACT US</h2>
         <ul
-          class="max-w-md space-y-1 font-bold list-none list-inside dark:text-gray-400"
+          class="max-w-md space-y-1 font-bold list-none list-inside "
         >
-          <li>Industrial Labels & Stickers</li>
-          <li>Hardware Supply</li>
-          <li>Custom Labels & Stickers</li>
-          <li>Electrical Assemblies</li>
-          <li>Tags & Flags</li>
-          <li>Self-Laminating Labels</li>
+          <li><div class="flex items-center">
+            <Icon class="font-bold " name="uil:envelope" /> <span class="p-1">info@evolyx.au</span> 
+          </div></li>
+          <li><div class="flex items-center">
+            <Icon class="font-bold " name="uil:phone" /> <span class="p-1">+XXXXXXXXX</span> 
+            </div></li>
+          <li class="m-2">  ExolvX Australia Pty Ltd</li>
+          <li class="m-2">ACN: 681 705 831</li>
+          <li class="m-2">278 / 18 - 20 Edinburgh St</li>
+          <li class="m-2">OAKLEIGH SOUTH VIC</li>
         </ul>
       </div>
     </div>
