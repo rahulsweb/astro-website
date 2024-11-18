@@ -30,6 +30,9 @@ import Blogs from "@components/blogs.astro";
 
     <!-- <Testimonal lient:only="vue"></Testimonal> -->
     <MySlider  />
+    <div class="about-us">
+     
+    </div>
     <Ats />
     <!-- <ContactUs></ContactUs> -->
      <Blogs/>
@@ -38,5 +41,14 @@ import Blogs from "@components/blogs.astro";
 </Layout>
 
 <style>
-
+  
+  @media screen and (max-width: 800px) {
+    #whyus{
+      display:block;
+    }
+    
+  .about-us{
+    height: 200px;
+  }
+  }
 </style>

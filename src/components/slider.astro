@@ -1,181 +1,68 @@
-<section class="container">
-    <div class="testimonial mySwiper">
-      <div class="testi-content swiper-wrapper">
-        <div class="slide swiper-slide">
-          <img src="https://th.bing.com/th/id/OIP.IGNf7GuQaCqz_RPq5wCkPgHaLH?rs=1&pid=ImgDetMain" alt="" class="image" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-            saepe provident dolorem a quaerat quo error facere nihil deleniti
-            eligendi ipsum adipisci, fugit, architecto amet asperiores
-            doloremque deserunt eum nemo.
-          </p>
+<section class="">
 
-          <i class="bx bxs-quote-alt-left quote-icon"></i>
+  
 
-          <div class="details">
-            <span class="name">Marnie Lotter</span>
-            <span class="job">Web Developer</span>
-          </div>
-        </div>
-        <div class="slide swiper-slide">
-          <img src="https://th.bing.com/th/id/OIP.w803-DqxmDWox25ob7MTfwHaHG?w=1194&h=1144&rs=1&pid=ImgDetMain" alt="" class="image" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-            saepe provident dolorem a quaerat quo error facere nihil deleniti
-            eligendi ipsum adipisci, fugit, architecto amet asperiores
-            doloremque deserunt eum nemo.
-          </p>
+    <div class="feedback">
+      <div class=" card-back" >
+        <h1 class="text-2xl md:text-4xl tracking-tight text-decoration mb-10 ">REAL CLIENTS...REAL COMMENTS...</h1>
 
-          <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-          <div class="details">
-            <span class="name">Marnie Lotter</span>
-            <span class="job">Web Developer</span>
-          </div>
-        </div>
-        <div class="slide swiper-slide">
-          <img src="https://writestylesonline.com/wp-content/uploads/2016/08/Follow-These-Steps-for-a-Flawless-Professional-Profile-Picture.jpg" alt="" class="image" />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-            saepe provident dolorem a quaerat quo error facere nihil deleniti
-            eligendi ipsum adipisci, fugit, architecto amet asperiores
-            doloremque deserunt eum nemo.
-          </p>
-
-          <i class="bx bxs-quote-alt-left quote-icon"></i>
-
-          <div class="details">
-            <span class="name">Marnie Lotter</span>
-            <span class="job">Web Developer</span>
-          </div>
+      </div>
+    <div class="card-body">
+      <div class="card">
+        <img src="/public/img/Icon.jpg" alt="" width="400" height="300"  class="card-img-top h-auto max-w-full rounded-lg">
+        <div class="max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow">
+          <i class="bi bi-quote"></i>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">EvolvX is a trusted supplier of high-qualitylabels and signs designed for durability andreliability. Our products withstandenvironmental challenges like moisture,chemicals, UV light, and abrasion, backed byrigorous testing. Our safety signs meetAustralian Standards for Signage (AS1319)and ISO 7010, in line with global guidelines forhazard identification and risk management.</p>
+        
         </div>
       </div>
-      <div class="swiper-button-next nav-btn"></div>
-      <div class="swiper-button-prev nav-btn"></div>
-      <div class="swiper-pagination"></div>
     </div>
-  </section>
+    </div>
+
+
+
+</section>
   
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <script is:inline src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-  <script is:inline>new Swiper('.swiper')</script>
+  <script is:inline>new Swiper('.swiper')</script> -->
 
 
 <style>
-    /* Google Fonts - Poppins */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+  .card-img-top {
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  margin-left: -30px;
+  width: 70px !important;
+  height: 70px;
+  border-radius: 50%;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
 }
-.container {
-  height: 60vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #e3f2fd;
-}
-.testimonial {
+
+.card {
+
   position: relative;
-  max-width: 900px;
-  width: 100%;
-  padding: 50px 0;
-  overflow: hidden;
+  top:40%;
 }
-.testimonial .image {
-  height: 170px;
-  width: 170px;
-  object-fit: cover;
-  border-radius: 50%;
+.feedback{
+  position: relative;
+  background-color: #5B5B5B;
+  color:white;
 }
-.testimonial .slide {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  row-gap: 30px;
-  height: 100%;
-  width: 100%;
+.card-body{
+  position: relative;
+  
 }
-.slide p {
-  text-align: center;
-  padding: 0 120px;
-  font-size: 14px;
-  font-weight: 400;
-  color: #333;
-}
-.slide .quote-icon {
-  font-size: 30px;
-  color: #4070f4;
-}
-.slide .details {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.details .name {
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-}
-.details .job {
-  font-size: 12px;
-  font-weight: 400;
-  color: #333;
-}
-/* swiper button css */
-.nav-btn {
-  height: 40px;
-  width: 40px;
-  border-radius: 50%;
-  transform: translateY(30px);
-  background-color: rgba(0, 0, 0, 0.1);
-  transition: 0.2s;
-}
-.nav-btn:hover {
-  background-color: rgba(0, 0, 0, 0.2);
-}
-.nav-btn::after,
-.nav-btn::before {
-  font-size: 20px;
-  color: #fff;
-}
-.swiper-pagination-bullet {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-.swiper-pagination-bullet-active {
-  background-color: #4070f4;
-}
-@media screen and (max-width: 768px) {
-  .container{
-    height: 100vh;
-  }
-  .slide p {
-    padding: 0 20px;
-  }
-  .nav-btn {
-    display: none;
-  }
+.card-back ,.card-body{
+height: 100px;
+text-align: center;
+display:grid;
+justify-content: center;
+place-content: center;
+
+ 
+
 }
 </style>
 
-  <script>
-   var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  grabCursor: true,
-  loop: true,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
-
-  </script>
