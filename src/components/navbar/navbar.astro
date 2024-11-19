@@ -4,34 +4,35 @@ import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
 import { Image } from 'astro:assets';
+// import Logo from '../../assets/img/Logo.png';
 import Logo from '../../assets/img/Logo.png';
 
 const menuitems = [
   {
     title: "Products",
-    path: "#",
+    path: "/evolvx/",
     children: [
-    { title: "Industrial Labels & Stickers", path: "#" },
-      { title: "Hardware Supply", path: "/" },
-      { title: "Other", path: "/" },
+    { title: "Industrial Labels & Stickers", path: "/evolvx/stickers" },
+      { title: "Hardware Supply", path: "/evolvx/hardware" },
+      { title: "Electrical Assemblies", path: "/evolvx/electrical" },
     
   
     ],
   },
   {
     title: "Why Choose Us",
-    path: "/whyus",
+    path: "/evolvx/whyus",
     type: "whyus",
   },
  
   {
     title: "Blog",
-    path: "/blog",
+    path: "/evolvx/blog",
     type:"blog"
   },
   {
     title: "Contact Us",
-    path: "/contact",
+    path: "/evolvx/contact",
     type: "contactus",
   },
 
@@ -46,11 +47,15 @@ const menuitems = [
 ];
 ---
 
+
 <Container>
   <header class="flex flex-col lg:flex-row  justify-between items-center my-5">
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
-        <Image src={Logo} alt="A bird sitting on a nest of eggs." width="250" />
+        <Link href="/evolvx/" style="inverted">
+                      <Image src={Logo} alt="A bird sitting on a nest of eggs." width="250" />
+
+                    </Link>
 
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />

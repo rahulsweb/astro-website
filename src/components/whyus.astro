@@ -2,140 +2,193 @@
 import Link from "./ui/link.astro";
 ---
 
-<div
-  class="bg-light p-8 md:px-20 md:py-20 mt-20 mx-auto max-w-5xl rounded-lg flex flex-col items-center text-center">
-  <h2 class="text-2xl md:text-4xl tracking-tight text-decoration text-decoration mb-10 ">
-    Why Choose Us
-  </h2>
-  <p class="text-lg leading-relaxed text-slate-500">
-    At EvolvX, we focus on quality, durability, and customization in our labeling solutions for diverse
-applications, from industrial to commercial.
+<div class="bg-black">
 
-   </p>
-  <div id="whyus" >
-    
-    <div class=" ">
-      <div class="whyus border-8 border-blue-400  rounded-lg m-4 p-10  " >
-        <div class=" ">
-       
-            <div class=" relative  p-5  text-gray-800 ">
-              Commitment
-              to Quality
-            </div>
-          
-    
-        </div>
-      </div>	
-    </div>
-    <div class=" ">
-      <div class="whyus border-8 border-blue-400  rounded-lg m-4 p-10  " >
-        <div class=" ">
-       
-            <div class=" relative  p-5  text-gray-800 ">
-              Durability You
-              Can Trust
-            </div>
-          
-    
-        </div>
-      </div>	
-    </div>
-    <div class=" ">
-      <div class="whyus border-8 border-blue-400  rounded-lg m-4 p-10  " >
-        <div class=" ">
-       
-            <div class=" relative  p-5  text-gray-800 ">
-              Custom
-              Solutions
-            </div>
-          
-    
-        </div>
-      </div>	
-    </div>
-    <div class=" ">
-      <div class="whyus border-8 border-blue-400  rounded-lg m-4 p-10  " >
-        <div class=" ">
-       
-            <div class=" relative  p-5  text-gray-800 ">
-              Expert
-              Support
-            </div>
-          
-    
-        </div>
-      </div>	
-    </div>
-    <div class=" ">
-      <div class="whyus border-8 border-blue-400  rounded-lg m-4 p-10  " >
-        <div class=" ">
-       
-            <div class=" relative  p-5  text-gray-800 ">
-              Versatile
-              Use
-            </div>
-          
-    
-        </div>
-      </div>	
-    </div>
-    <div class=" ">
-      <div class="whyus border-8 border-blue-400  rounded-lg m-4 p-10  " >
-        <div class=" ">
-       
-            <div class=" relative  p-5  text-gray-800 ">
-              Customer
-              Satisfaction
-            </div>
-          
-    
-        </div>
-      </div>	
-    </div>
+  <section id="features"
+      class="relative block px-6 py-10 md:py-20 md:px-10  border-t border-b border-neutral-100 bg-neutral-100/30">
 
-  </div>
 
- <!-- <div class="flex flex-col gap-3 mx-auto max-w-4xl mt-16">
- 
-      <p class="text-lg leading-relaxed text-slate-500">
-       At EvolvX, we focus on quality, durability, and customization in our labeling solutions for diverse
-applications, from industrial to commercial.
-
-      </p>
-      <h2 class="font-bold text-3xl text-gray-800">
-        Commitment to Quality
+      <div class="relative mx-auto max-w-5xl text-center">
+        <h2
+        class="block w-full bg-gradient-to-b from-white to-gray-200 bg-clip-text font-bold text-transparent text-3xl sm:text-4xl">
+        WHY CHOOSE US
     </h2>
-      <p class="text-lg leading-relaxed text-slate-500">
-        EvolvX is a trusted supplier of high-quality labels and signs designed for durability and reliability. Our products withstand environmental challenges like moisture, chemicals, UV light, and abrasion, backed by rigorous testing. Our safety signs meet Australian Standards for Signage (AS1319) and ISO 7010, in line with global guidelines for hazard identification and risk management.
-        </p>
-        <h2 class="font-bold text-3xl text-gray-800">
-          Durability You Can Trust
-      </h2>
-        <p class="text-lg leading-relaxed text-slate-500">
-          Our products are designed to endure harsh conditions, maintaining clarity and integrity in extreme temperatures and tough environments.          </p>
-          <h2 class="font-bold text-3xl text-gray-800">
-            Custom Solutions
-          </h2>
-          <p class="text-lg leading-relaxed text-slate-500">
-            With a range of customization options, you can tailor labels and signs to your specific needs, including size, shape, and graphics.            </p>
-
-            <h2 class="font-bold text-3xl text-gray-800">
-              Expert Support
-            </h2>
-            <p class="text-lg leading-relaxed text-slate-500">
-              Our knowledgeable team provides personalized assistance throughout the design and ordering process to ensure optimal solutions for your needs.
-            
       
-    </div>
-  <div class="flex mt-5">
-    <div class="flex md:items-center md:justify-start justify-center">
-      <Link href="/whyus" style="inverted">
-        <button class="w-36 h-12 rounded-full bg-indigo-600 transition-all duration-700 hover:bg-indigo-800 shadow text-white text-center text-base font-semibold leading-6">Know More</button>
+          <p
+              class="mx-auto my-4 w-full max-w-xl bg-transparent text-center font-medium leading-relaxed tracking-wide text-gray-200">
+              At EvolvX, we focus on quality, durability, and customization in our labeling solutions for diverse
+              applications, from industrial to commercial.
+              
+          </p>
+      </div>
 
-      </Link>
-  </div>
-  </div>
-</div> -->
+
+      <div class="relative mx-auto max-w-7xl z-10 grid grid-cols-1 gap-10 pt-14 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow transition duration-300 hover:scale-105 ">
+              <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border hover:rotate-180 "
+                  style="  background: linear-gradient(to right,#00B6F0 20%,transparent 100% ),url(/src/assets/hero.jpeg);; border-color: rgb(93, 79, 240);">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon text-white  icon-tabler icon-tabler-color-swatch" width="24"
+                      height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M19 3h-4a2 2 0 0 0 -2 2v12a4 4 0 0 0 8 0v-12a2 2 0 0 0 -2 -2"></path>
+                      <path d="M13 7.35l-2 -2a2 2 0 0 0 -2.828 0l-2.828 2.828a2 2 0 0 0 0 2.828l9 9"></path>
+                      <path d="M7.3 13h-2.3a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h12"></path>
+                      <line x1="17" y1="17" x2="17" y2="17.01"></line>
+                  </svg>
+              </div>
+              <h3 class="mt-6 text-gray-200">Commitment
+                to Quality</h3>
+              <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-200">EvolvX is a trusted supplier of high-quality labels and signs designed for durability and reliability. 
+              </p>
+          </div>
+
+
+          <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow transition duration-300 hover:scale-105">
+              <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border hover:rotate-180 "
+                  style="  background: linear-gradient(to right,#00B6F0 20%,transparent 100% ),url(/src/assets/hero.jpeg);; border-color: rgb(93, 79, 240);">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon text-white  icon-tabler icon-tabler-bolt" width="24"
+                      height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <polyline points="13 3 13 10 19 10 11 21 11 14 5 14 13 3"></polyline>
+                  </svg>
+              </div>
+              <h3 class="mt-6 text-gray-200">Durability You
+                Can Trust</h3>
+              <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-200">Our products are designed to endure harsh conditions, maintaining clarity and integrity in extreme temperatures and tough environments.
+              </p>
+          </div>
+
+
+          <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow transition duration-300 hover:scale-105">
+              <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border hover:rotate-180 "
+                  style="  background: linear-gradient(to right,#00B6F0 20%,transparent 100% ),url(/src/assets/hero.jpeg);; border-color: rgb(93, 79, 240);">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="icon text-white  icon-tabler icon-tabler-tools" width="24"
+                      height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                      stroke-linecap="round" stroke-linejoin="round">
+                      <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                      <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
+                      <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
+                      <polyline points="12 8 7 3 3 7 8 12"></polyline>
+                      <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
+                      <polyline points="16 12 21 17 17 21 12 16"></polyline>
+                      <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
+                  </svg>
+              </div>
+              <h3 class="mt-6 text-gray-200">Custom
+                Solutions</h3>
+              <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-200">
+                With a range of customization options, you can tailor labels and signs to your specific needs, including size, shape, and graphics.
+              </p>
+          </div>
+          <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow transition duration-300 hover:scale-105">
+            <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border hover:rotate-180 "
+                style="  background: linear-gradient(to right,#00B6F0 20%,transparent 100% ),url(/src/assets/hero.jpeg);; border-color: rgb(93, 79, 240);">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon text-white  icon-tabler icon-tabler-tools" width="24"
+                    height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
+                    <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
+                    <polyline points="12 8 7 3 3 7 8 12"></polyline>
+                    <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
+                    <polyline points="16 12 21 17 17 21 12 16"></polyline>
+                    <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
+                </svg>
+            </div>
+            <h3 class="mt-6 text-gray-200">Expert Support</h3>
+            <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-200">
+              Our knowledgeable team provides personalized assistance throughout the design and ordering process to ensure optimal solutions for your needs.
+            </p>
+        </div>
+
+        <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow transition duration-300 hover:scale-105">
+          <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border hover:rotate-180 "
+              style="  background: linear-gradient(to right,#00B6F0 20%,transparent 100% ),url(/src/assets/hero.jpeg);; border-color: rgb(93, 79, 240);">
+              <svg xmlns="http://www.w3.org/2000/svg" class="icon text-white  icon-tabler icon-tabler-tools" width="24"
+                  height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                  <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
+                  <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
+                  <polyline points="12 8 7 3 3 7 8 12"></polyline>
+                  <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
+                  <polyline points="16 12 21 17 17 21 12 16"></polyline>
+                  <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
+              </svg>
+          </div>
+          <h3 class="mt-6 text-gray-200">Versatile
+            Use</h3>
+          <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-200">
+            EvolvX solutions are suitable for various industries, including manufacturing, healthcare, logistics, and retail.
+
+
+          </p>
+      </div>
+
+      <div class="rounded-md border border-neutral-800 bg-neutral-900/50 p-8 text-center shadow transition duration-300 hover:scale-105">
+        <div class="button-text mx-auto flex h-12 w-12 items-center justify-center rounded-md border hover:rotate-180 "
+            style="  background: linear-gradient(to right,#00B6F0 20%,transparent 100% ),url(/src/assets/hero.jpeg);; border-color: rgb(93, 79, 240);">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon text-white  icon-tabler icon-tabler-tools" width="24"
+                height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4"></path>
+                <line x1="14.5" y1="5.5" x2="18.5" y2="9.5"></line>
+                <polyline points="12 8 7 3 3 7 8 12"></polyline>
+                <line x1="7" y1="8" x2="5.5" y2="9.5"></line>
+                <polyline points="16 12 21 17 17 21 12 16"></polyline>
+                <line x1="16" y1="17" x2="14.5" y2="18.5"></line>
+            </svg>
+        </div>
+        <h3 class="mt-6 text-gray-200">Customer Satisfaction</h3>
+        <p class="my-4 mb-0 font-normal leading-relaxed tracking-wide text-gray-200">
+          We’re dedicated to exceeding customer expectations and quickly resolving any issues.
+
+
+        </p>
+    </div>
+
+
+
+      </div>
+
+      <div class="absolute bottom-0 left-0 z-0 h-1/3 w-full border-b"
+          style="background-image: linear-gradient(to right top, rgba(79, 70, 229, 0.2) 0%, transparent 50%, transparent 100%); border-color: rgba(92, 79, 240, 0.2);">
+      </div>
+      <div class="absolute bottom-0 right-0 z-0 h-1/3 w-full"
+          style="background-image: linear-gradient(to left top, rgba(220, 38, 38, 0.2) 0%, transparent 50%, transparent 100%); border-color: rgba(92, 79, 240, 0.2);">
+      </div>
+
+  </section>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <style >

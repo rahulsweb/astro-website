@@ -22,9 +22,10 @@ import Blogs from "@components/blogs.astro";
 
     <Hero />
 
-    <ProductList></ProductList>
-  
+
+    <Ats />
     <Whyus />
+    <ProductList></ProductList>
     <!-- <Clients /> -->
     <!-- <Features /> -->
 
@@ -33,7 +34,7 @@ import Blogs from "@components/blogs.astro";
     <div class="about-us">
      
     </div>
-    <Ats />
+
     <!-- <ContactUs></ContactUs> -->
      <Blogs/>
      <Cta />
@@ -41,7 +42,9 @@ import Blogs from "@components/blogs.astro";
 </Layout>
 
 <style>
-  
+    .about-us{
+    height: 200px;
+  }
   @media screen and (max-width: 800px) {
     #whyus{
       display:block;

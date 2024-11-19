@@ -2,102 +2,119 @@
 // @ts-ignore
 import { Picture } from "astro:assets";
 
-
 const features = [
   {
     title: "Durable Barcode Labels",
     features:
       "Scratch-resistant surface, high-resolution print, and long-lasting adhesive",
-    application: "Engineered to maintain readability under heavy wear and tear, making them ideal for asset tracking and inventory management",
-    path:'/products/box.png  '
+    application:
+      "Engineered to maintain readability under heavy wear and tear, making them ideal for asset tracking and inventory management",
+    path: "/evolvx/products/box.png  ",
   },
   {
     title: "Weatherproof Labels",
     features:
       "Waterproof, UV-resistant, and temperature-stable, suitable for harsh weather conditions.",
-    application: "Designed to endure extreme outdoor conditions, perfect for assets exposed to rain, sun, and temperature fluctuations.",
-    path:'/products/boxpack.jpeg'
+    application:
+      "Designed to endure extreme outdoor conditions, perfect for assets exposed to rain, sun, and temperature fluctuations.",
+    path: "/evolvx/products/boxpack.jpeg",
   },
   {
     title: "Removable and Repositionable Labels",
     features:
       "Residue-free adhesive, repositionable multiple times without compromising adhesion.",
-    application: "Ideal for temporary asset tracking or labels that may need relocation without leaving residue.",
-    path:'/products/networkwire.jpeg'
+    application:
+      "Ideal for temporary asset tracking or labels that may need relocation without leaving residue.",
+    path: "/evolvx/products/networkwire.jpeg",
   },
   {
     title: "Expansion Anchors ",
     features:
       "High-contrast colors for visibility, resistant to heat, UV, and chemicals, available in various sizes.",
-    application: "Ideal for concrete and masonry, these anchors expand upon installation for a secure hold.",
-    path:'/products/lan.png'
+    application:
+      "Ideal for concrete and masonry, these anchors expand upon installation for a secure hold.",
+    path: "/evolvx/products/lan.png",
   },
   {
     title: "Sleeve Anchors ",
     features:
       "High-contrast colors for visibility, resistant to heat, UV, and chemicals, available in various sizes.",
-    application: "Designed for versatility, sleeve anchors can be used in various materials, providing excellent holding power",
-    path:'/products/scanner.jpeg'
+    application:
+      "Designed for versatility, sleeve anchors can be used in various materials, providing excellent holding power",
+    path: "/evolvx/products/scanner.jpeg",
   },
   {
     title: "Hex Bolts ",
     features:
       "High-contrast colors for visibility, resistant to heat, UV, and chemicals, available in various sizes.",
-    application: "Hex Bolts are Versatile and commonly used in construction and industrial applications.",
-    path:'/products/lanslots.png'
+    application:
+      "Hex Bolts are Versatile and commonly used in construction and industrial applications.",
+    path: "/evolvx/products/lanslots.png",
   },
-
 ];
 ---
 
-
-
-
-<div class="font-sans p-4 mx-auto lg:max-w-5xl md:max-w-3xl sm:max-w-full">
-    <h2 class="text-2xl md:text-4xl tracking-tight text-decoration text-decoration mb-10">TRADING PRODUCTS</h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+<div >
+  <section class="py-24">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <h2 class="text-2xl md:text-4xl tracking-tight text-decoration mb-10">
+        TRENDING PRODUCTS
+      </h2>
+      <div
+        class="sm:w-full  lg:grid lg:grid-cols-3 lg:gap-3  mx-auto mt-5  "
+      >
         {
-            features.map((item) => (
-         
-            
-          
-
-      <div class="bg-white rounded overflow-hidden shadow-md cursor-pointer hover:scale-[1.02] transition-all border-4	">
-        <div class="w-full aspect-w-16 aspect-h-8 lg:h-80">
-            <Picture  src={item.path}          alt="not image"
-                    sizes="(max-width: 800px) 100vw, 800px"
+          features.map((item) => (
+            <div class="flex flex-1 flex-col justify-between w-full border-2 border-gray-400  rounded mt-5 shadow-2xl shadow card-body transition duration-300 hover:scale-105">
+              <div class="flex items-center">
+                <Picture
+            src={item.path}
+                    alt=""
+                  
                     width={800}
-                    height={600}
-                     loading="lazy"
-                 
-                     class="h-full w-full object-cover object-top" />
-      
-         
-        </div>
+                    height={800}
+                    loading="lazy"
+                    decoding="async"
+                    class="w-full rounded-md object-cover object-center bg-white"
+                  />
+          
+              </div>
+              <div class="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl ">
+    
+                <h4 class="text-xl text-gray-900 font-medium leading-8 mb-5">
+                  {item.title}
+                </h4>
+                <p class="text-gray-500 leading-6 mb-10">{item.features}</p>
+                <div class="d-flex flex-row justify-content-center mt-auto text-center">
+    <button type="button" class="btn text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-md px-5 py-2.5 text-center me-2 mb-2">View Products</button>
 
-        <div class="p-4">
-            
-          <h3 class="text-lg font-bold text-gray-800">{item.title}</h3>
-          <div class="mt-4 flex items-center flex-wrap gap-2">
-            {/* <p class="text-lg font-bold text-gray-800">{item.features}</p> */}
-
-            <p class="text-slate-500 mt-2 leading-relaxed">{item.application}</p>
-            <div class="w-full inline-flex items-center justify-center">
-              <button type="button" class=" text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-md px-5 py-2.5 text-center me-2 mb-2">View Products</button>
-
-            </div>
-
-          </div>
-        </div>
-      </div>
-      ))
-      }
-      
-
-
-    </div>
   </div>
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+</div>
 
 
 
+<style>
+  .card-body {
+  display: flex;
+  flex-direction: column;
+  max-height:700px;
+}
+
+.self-end {
+  
+    position: relative;
+
+
+}
+.self-end .btn{
+  /* position:absolute;
+  bottom:0; */
+}
+</style>

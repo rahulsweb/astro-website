@@ -17,22 +17,36 @@ cambio();
     <!-- <img src="/hero.jpeg" alt=""> -->
     <div class="content">
         <div class="overlay-text">
-            
-            <h1  class="text-white font-extrabold text-4xl heading"><span class="front">RELIABILITY YOU CAN SEE</span></h1>
-            <p class="text-gray-600  text-2xl">Driven by quality, precision, and a deep
-                commitment to industry standards.</p>
+     
+            <div class="typew">
+              <h1  class="text-white font-extrabold text-4xl heading typewrite" data-period="100" data-type='[ "RELIABILITY YOU CAN SEE", "QUALITY YOU CAN FEEL" ]'><span class="front"></span></h1>
+            </div>
+
+            <div class="typew">
+              <p class="text-gray-700  text-2xl typewrite1 m-2 "><span class="front"></span></p>
+            </div>
                
-                    <button type="button" class=" text-white bg-gradient-to-r from-gray-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-md px-5 py-2.5 text-center me-2 mb-2">View Products</button>
-      
+                <span class="wrap"></span>
+                <div class="display">
+                    <span class="root"></span>
+                    <span class="tail"></span>
+                  </div>
+            <div class="typew mt-5" >
+              <button type="button" class="mt-10 text-white bg-gradient-to-r from-gray-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-md px-5 py-2.5 text-center me-2 mb-2">View Products</button>
+
+            </div>
                   
         </div>
     </div>
 </div>
 <style is:global>
+  .typew{
+    height:50px;
+  }
 .content{
     position: relative;
     width: 100%;
-    height:100vh;
+    height:80vh;
     background-size: 100% 100%;
     background-image:  url(/src/assets/hero.jpeg);
     background: linear-gradient(to right,#00B6F0 20%,transparent 100% ),url(/src/assets/hero.jpeg);
@@ -59,10 +73,108 @@ cambio();
     /* margin-left: 10px;
     margin-right: 10px; */
   }
-  .pickgradient:hover .front{
-   display: none;
-}  .pickgradient:hover .heading:after{
-    content: 'QUALITY YOU CAN FEEL';
-}
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+/* Global */
+
 
 </style>
+
+<script>
+function sleep(ms) {
+  return new Promise(r => setTimeout(r, ms));
+}
+
+async function typewrite(txt, el) {
+  el.innerText = "";
+  for (const char of txt) {
+    el.textContent += char;
+    // await sleep(0);
+  }
+}
+
+async function main() {
+  const TAILS = [`Driven by quality, precision, and a deep
+                commitment to industry standards.`, `We deliver premium globally certified products designed to surpass regulatory demands and elevate customer expectations.` ];
+  const ROOT_TEXT = " ";
+  const root = document.querySelector(".root");
+  const tail = document.querySelector(".typewrite1");
+  await typewrite(ROOT_TEXT, root);
+  let tailIndex = 0;
+  while (true) {
+    await typewrite(TAILS[tailIndex], tail);
+    await sleep(4000);
+    tailIndex = (tailIndex + 1) % TAILS.length;
+  }
+}
+
+main();
+
+    var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 4000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 150 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+      
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        let str='.typewrite > .wrap';
+        animation(elements,str);
+    };
+    function animation(elements,str){
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = `${str} { border-right: 0.08em solid #fff}`;
+        document.body.appendChild(css);
+    }
+
+
+
+    
+</script>
